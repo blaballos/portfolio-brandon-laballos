@@ -1,0 +1,78 @@
+---
+import CodeBadge from "./CodeBadge.astro";
+import CIcon from "./icons/C++Icon.astro";
+import PythonIcon from "./icons/PythonIcon.astro";
+
+const TAGS = {
+    PYTHON: {
+        name: "Python",
+        class: "bg-blue-500",
+        icon: PythonIcon,
+    },
+    C: {
+        name: "C++",
+        class: "bg-red-500",
+        icon: CIcon,
+    },
+}
+
+const PROJECTS = [
+    {
+        title: "Sistema de Gestión de Clientes",
+        description: "Sistema que permite registrar clientes en una veterinaria. Aprendí a manipular métodos y atributos privados de una clase.",
+        href: "https://github.com/blaballos/management-system-for-veterinary",
+        image: "/projects/sistemaVeterinaria.webp",
+        tags: [TAGS.C],
+    },
+    {
+        title: "Juego de Roles",
+        description: "Sistema que permite registrar clientes en una veterinaria. Aprendí a manipular métodos y atributos privados de una clase.",
+        href: "https://github.com/blaballos/role-play-game",
+        image: "/projects/sistemaVeterinaria.webp",
+        tags: [TAGS.PYTHON],
+    },
+]
+---
+
+<div>
+    {
+        PROJECTS.map(({title, description, href, image, tags}) => (
+            <article>
+                <div>
+                    <div>
+                        <img src={image} alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <h3>
+                        {title}
+                    </h3>
+                    <div>
+                        <ul>
+                            {
+                                tags.map((tag) => (
+                                    <li>
+                                        <span>
+                                            <tag.icon />
+                                            {tag.name}
+                                        </span>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <div>
+                            {description}
+                        </div>
+                        <footer>
+                            <CodeBadge href={href}/>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        ))
+    }
+</div>
+
+
+

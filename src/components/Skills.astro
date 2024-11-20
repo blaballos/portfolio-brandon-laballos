@@ -1,0 +1,62 @@
+---
+import CIcon from "./icons/C++Icon.astro";
+import PythonIcon from "./icons/PythonIcon.astro";
+import HTMLIcon from "./icons/HTMLIcon.astro";
+import CSSIcon from "./icons/CSSIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+
+const ICONS = {
+    PYTHON: {
+        svg: PythonIcon,
+    },
+    C: {
+        svg: CIcon,
+    },
+    HTML: {
+        svg: HTMLIcon,
+    },
+    CSS: {
+        svg: CSSIcon,
+    },
+    ASTRO: {
+        svg: AstroIcon,
+    },
+}
+
+const SKILLS = [
+    {
+        name: "Python",
+        icons: [ICONS.PYTHON],
+    },
+    {
+        name: "C++",
+        icons: [ICONS.C],
+    },
+    {
+        name: "Astro",
+        icons: [ICONS.ASTRO],
+    },
+    {
+        name: "HTML",
+        icons: [ICONS.HTML],
+    },
+    {
+        name: "CSS",
+        icons: [ICONS.CSS],
+    },
+]
+---
+<ul class="flex justify-center grid-cols-12 gap-x-20">
+    {
+        SKILLS.map(({name, icons}) => (
+            <li class="flex flex-col w-full items-center border rounded col-span-1 p-4">
+                {icons.map((icon) => (
+                    <icon.svg class="size-8"/>
+                    ))
+                }
+                <h2 class="text-lg font-white font-semibold opacity-80 mt-2">{name}</h2>
+            </li>
+        ))
+    }
+</ul>
+

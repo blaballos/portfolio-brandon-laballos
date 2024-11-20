@@ -5,53 +5,61 @@ import Section from '../components/Section.astro';
 import Badge from '../components/Badge.astro';
 import SocialBadges from '../components/SocialBadges.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import Skills from '../components/Skills.astro';
 
 // ICONS
 import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
 import GitHubIcon from '../components/icons/GitHubIcon.astro';
-import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
+import ToolIcon from '../components/icons/ToolIcon.astro';
+import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
 ---
 
-<Layout title="Portfolio Brandon Laballos.">
+<Layout title="Portfolio Brandon Laballos - Junior Developer de Argentina">
 	<main>
-		<Section class="py-44 pb-28">
-			<h1 class="flex flex-row text-3xl lg:text-5xl text-white font-bold gap-x-4 pb-4">
-				Brandon Laballos 
+		<Section class="py-52">
+			<h1 class="flex flex-row text-4xl lg:text-5xl text-white font-bold gap-x-4 pb-4">
+				Brandon Laballos
 				<a
 				href="mailto:laballosbrandon@gmail.com"
 				target="_blank"
-				rel="noopener" 
+				rel="noopener noreferrer" 
 				class="flex items-center">
 					<Badge>Disponible para Trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl lg:text-2xl font-semibold">
-				<span class="opacity-80">Junior Developer de Argentina. Actualmente estudiando </span>
+			<h2 class="text-xl text-wrap font-semibold pb-4">
+				<span class="opacity-80">Junior Developer de Argentina. Actualmente estudiando</span>
 				<span class="text-yellow-200">Ingeniería en Sistemas de Información</span>
 				<span class="opacity-80">en la UTN, en búsqueda de crear soluciones.</span>
 			</h2>
-			<nav class="flex flex-wrap gap-4 mt-4">
+			<nav class="flex flex-row gap-x-4">
+				<SocialBadges href="https://github.com/blaballos">
+					<MailIcon />
+					Contáctame
+				</SocialBadges>
 				<SocialBadges href="https://linkedin.com/in/brandonlaballos">
 					<LinkedInIcon />
 					LinkedIn
 				</SocialBadges>
-				<SocialBadges href="https://github.com/blaballos">
-					<GitHubIcon />
-					GitHub
-				</SocialBadges>
-				<SocialBadges href="https://hackerrank.com/blaballos">
-					<HackerRankIcon />
-					HackerRank
-				</SocialBadges>
 			</nav>
 		</Section>
-		<Section id="proyectos">
-			<h2 class="flex items-center gap-x-2 text-2xl font-semibold mb-4">
+
+		<Section class="pb-16">
+			<h2 id="proyectos" class="flex items-center gap-x-2 text-3xl font-semibold pb-6">
 				<CodeIcon class="size-8" />
-				Proyectos Destacados
+				Proyectos
 			</h2>
 			<ProjectCard />
+		</Section>
+
+		<Section>
+			<h2 id="skills" class="flex items-center gap-x-2 text-3xl font-semibold pb-6">
+				<ToolIcon class="size-8" />
+				Skills
+			</h2>
+			<Skills />
 		</Section>
 	</main>
 </Layout>

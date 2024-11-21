@@ -6,14 +6,14 @@ import Badge from '../components/Badge.astro';
 import SocialBadges from '../components/SocialBadges.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Skills from '../components/Skills.astro';
+import Aboutme from '../components/Aboutme.astro';
 
 // ICONS
 import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
 import MailIcon from '../components/icons/MailIcon.astro';
-import GitHubIcon from '../components/icons/GitHubIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
 import ToolIcon from '../components/icons/ToolIcon.astro';
-import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
+import AboutMeIcon from '../components/icons/AboutMeIcon.astro';
 ---
 
 <Layout title="Portfolio Brandon Laballos - Junior Developer de Argentina">
@@ -35,7 +35,7 @@ import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
 				<span class="opacity-80">en la UTN, en búsqueda de crear soluciones.</span>
 			</h2>
 			<nav class="flex flex-row gap-x-4">
-				<SocialBadges href="https://github.com/blaballos">
+				<SocialBadges href="mailto:laballosbrandon@gmail.com">
 					<MailIcon />
 					Contáctame
 				</SocialBadges>
@@ -54,12 +54,20 @@ import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
 			<ProjectCard />
 		</Section>
 
-		<Section>
+		<Section class="pb-16">
 			<h2 id="skills" class="flex items-center gap-x-2 text-3xl font-semibold pb-6">
 				<ToolIcon class="size-8" />
 				Skills
 			</h2>
 			<Skills />
+		</Section>
+
+		<Section class="pb-16">
+			<h2 id="sobre-mi" class="flex items-center gap-x-2 text-3xl font-semibold pb-6">
+				<AboutMeIcon class="size-8" />
+				Sobre mí
+			</h2>
+			<Aboutme />
 		</Section>
 	</main>
 </Layout>

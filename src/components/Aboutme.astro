@@ -1,0 +1,35 @@
+---
+import SocialBadges from '../components/SocialBadges.astro';
+import GitHubIcon from '../components/icons/GitHubIcon.astro';
+import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
+---
+
+<article class="flex flex-row space-x-8">
+    <div class="w-2/3 space-y-4 text-md text-wrap opacity-80">
+        <p>
+            Soy Brandon, tengo 21 años y vivo en Buenos Aires, Argentina. Actualmente estudio <span class="text-yellow-200">Ingeniería en Sistemas de Información</span> en la Universidad Tecnológica Nacional (UTN), donde recientemente aprendí C++ y participé en <span class="text-yellow-200 underline"><a href="https://github.com/blaballos/AED" target="_blank" rel="noopener noreferrer">proyectos</a></span> colavorativos con mis compañeros.
+        </p>
+
+        <p>
+            Además, he complementado mi formación académica con diversos cursos que me permitieron dar mis primeros pasos como programador. <span class="text-yellow-200">Destaco mi participación en <a class="underline" href="/docs/certificado-argentina-programa.pdf" download="certificado-brandon-laballos.pdf" target="_blank" rel="noopener noreferrer">Argentina Programa 4.0</a></span>, donde trabajé en equipo en la creación de distintos sitios webs.
+        </p>
+
+        <p>
+            Mi objetivo es seguir creciendo como desarrollador, <span class="text-yellow-200">explorando nuevas tecnologías y participando en proyectos desafiantes</span> que impulsen mi crecimiento personal y profesional.
+        </p>
+    </div>
+    <div class="flex flex-col justify-center items-center space-y-4">
+        <img src="" alt="Foto de Brandon Laballos">
+        <div class="flex flex-row gap-x-2">
+            <SocialBadges href="https://github.com/blaballos">
+				<GitHubIcon />
+				GitHub
+			</SocialBadges>
+
+            <SocialBadges href="https://www.hackerrank.com/blaballos">
+				<HackerRankIcon />
+				HackerRank
+			</SocialBadges>
+        </div>
+    </div>
+</article>

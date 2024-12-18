@@ -10,7 +10,6 @@ import Aboutme from '../components/Aboutme.astro';
 
 // ICONS
 import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
-import MailIcon from '../components/icons/MailIcon.astro';
 import FileIcon from '../components/icons/FileIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
 import ToolIcon from '../components/icons/ToolIcon.astro';
@@ -20,7 +19,7 @@ import AboutMeIcon from '../components/icons/AboutMeIcon.astro';
 <Layout title="Portfolio Brandon Laballos - Junior Developer de Argentina">
 	<main class="p-6 lg:p-0">
 		<Section class="py-52">
-			<div class="flex flex-row justify-start items-center space-x-4 pb-4">
+			<div class="flex flex-row justify-start items-center space-x-4 pb-6">
 				<div class="rounded-full shadow-md">
 					<img class="size-16 rounded-full" src="/images/avatar-brandon-laballos.webp" alt="Brandon Laballos">
 				</div>
@@ -32,19 +31,17 @@ import AboutMeIcon from '../components/icons/AboutMeIcon.astro';
 					<Badge>Disponible para Trabajar</Badge>
 				</a>
 			</div>
-			<h1 class="flex flex-row text-4xl lg:text-5xl text-white font-bold gap-x-4 pb-4">
+			<h1 class="flex flex-row text-4xl lg:text-5xl text-white font-bold gap-x-4 pb-6">
 				Brandon Laballos
 			</h1>
-			<h2 class="text-xl text-wrap font-semibold pb-4">
-				<span class="opacity-80">Junior Developer de Buenos Aires, Argentina. Estudiante de</span>
-				<span class="text-yellow-200">Ingeniería en Sistemas de Información</span>
-				<span class="opacity-80">en la UTN, con interés en crear soluciones.</span>
-			</h2>
+			<div class="max-w-3xl pb-6">
+				<p class="text-2xl text-pretty font-semibold">
+					<span class="opacity-80">Junior Developer de Buenos Aires, Argentina. Estudiante de</span>
+					<span class="text-yellow-200">Ingeniería en Sistemas de Información</span>
+					<span class="opacity-80">en la UTN, en búsqueda de crear soluciones.</span>
+				</p>
+			</div>
 			<nav class="flex flex-row gap-x-4">
-				<SocialBadges href="mailto:laballosbrandon@gmail.com">
-					<MailIcon />
-					Contáctame
-				</SocialBadges>
 				<SocialBadges href="https://linkedin.com/in/brandonlaballos">
 					<LinkedInIcon />
 					LinkedIn

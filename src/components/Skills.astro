@@ -4,6 +4,7 @@ import PythonIcon from "./icons/PythonIcon.astro";
 import HTMLIcon from "./icons/HTMLIcon.astro";
 import CSSIcon from "./icons/CSSIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
 
 const ICONS = {
     PYTHON: {
@@ -15,6 +16,9 @@ const ICONS = {
     HTML: {
         svg: HTMLIcon,
     },
+    TAILWINDCSS: {
+        svg: TailwindCSSIcon,
+    },
     CSS: {
         svg: CSSIcon,
     },
@@ -25,36 +29,33 @@ const ICONS = {
 
 const SKILLS = [
     {
-        name: "Python",
         icons: [ICONS.PYTHON],
     },
     {
-        name: "C++",
         icons: [ICONS.C],
     },
     {
-        name: "Astro",
         icons: [ICONS.ASTRO],
     },
     {
-        name: "HTML",
         icons: [ICONS.HTML],
     },
     {
-        name: "CSS",
+        icons: [ICONS.TAILWINDCSS],
+    },
+    {
         icons: [ICONS.CSS],
     },
 ]
 ---
-<ul class="flex justify-center grid-cols-5 gap-x-2 md:grid-cols-12 md:gap-x-14">
+<ul class="justify-center grid grid-cols-3 grid-rows-2 md:grid-cols-3 gap-x-8 gap-y-6">
     {
-        SKILLS.map(({name, icons}) => (
-            <li class="flex flex-col w-full items-center border border-gray-800 bg-white/10 hover:scale-105 hover:bg-white/20 transition duration-200 rounded-xl opacity-90 col-span-1 p-4">
+        SKILLS.map(({icons}) => (
+            <li class="flex flex-col w-full items-center bg-gradient-to-b from-blue-100/30 to-transparent col-span-1 py-6 group hover:from-blue-100/50 transition duration-300">
                 {icons.map((icon) => (
-                    <icon.svg class="size-8"/>
+                    <icon.svg class="size-14 group-hover:scale-125 transition duration-300"/>
                     ))
                 }
-                <h2 class="text-lg font-white font-semibold opacity-80 mt-2">{name}</h2>
             </li>
         ))
     }

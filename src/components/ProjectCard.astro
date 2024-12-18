@@ -1,5 +1,6 @@
 ---
 import CodeBadge from "./CodeBadge.astro";
+import PreviewButton from "./PreviewButton.astro";
 import CIcon from "./icons/C++Icon.astro";
 import PythonIcon from "./icons/PythonIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
@@ -33,6 +34,7 @@ const PROJECTS = [
         title: "ToolSun - Catálogo de Componentes Personalizados",
         description: "Desarrolé un sitio dónde podrán encontrar componentes personalizados con Tailwind CSS para diseñar de manera eficiente sus páginas web.",
         href: "https://github.com/blaballos/ToolSun",
+        preview: "https://toolsun.netlify.app/",
         image: "/projects/toolsun-image.webp",
         tags: [TAGS.ASTRO, TAGS.TAILWINDCSS],
     },
@@ -40,6 +42,7 @@ const PROJECTS = [
         title: "Sistema para la Gestión de Clientes",
         description: "He desarrollado un sistema para el registro y gestión de clientes en una veterinaria. Utilicé métodos y atributos privados en las clases, optimizando la encapsulación y mejorando la seguridad del código.",
         href: "https://github.com/blaballos/management-system-for-veterinary",
+        notpreview: "hidden",
         image: "/projects/management-system-for-veterinary.webp",
         tags: [TAGS.C],
     },
@@ -47,6 +50,7 @@ const PROJECTS = [
         title: "Juego de Roles con Python",
         description: "He diseñado un sistema que permite a los usuarios crear su personaje, asignarle un rol y combatir. Uso conceptos como la herencia para modelar las características de los diferentes roles de manera eficiente.",
         href: "https://github.com/blaballos/role-play-game",
+        notpreview: "hidden",
         image: "/projects/role-play-game-image.webp",
         tags: [TAGS.PYTHON],
     },
@@ -55,7 +59,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-14">
     {
-      PROJECTS.map(({ image, title, description, tags, href}) => (
+      PROJECTS.map(({ image, title, description, tags, href, preview, notpreview}) => (
       <article class="flex flex-col space-y-8 md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700">
@@ -79,9 +83,9 @@ const PROJECTS = [
             </ul>
         
             <div class="text-md text-white opacity-80 pb-4">{description}</div>
-            <footer class="flex flex-row justify-start gap-x-4">
+            <footer class="flex flex-row justify-start gap-x-2">
               <CodeBadge href={href}/>
-              <CodeBadge href={href}/>
+              <PreviewButton href={preview} class={`${notpreview}`} />
             </footer>
           </div>
         </div>

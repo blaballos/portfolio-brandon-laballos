@@ -2,21 +2,40 @@
 import CodeBadge from "./CodeBadge.astro";
 import CIcon from "./icons/C++Icon.astro";
 import PythonIcon from "./icons/PythonIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
 
 const TAGS = {
     PYTHON: {
         name: "Python",
-        class: "bg-[#B8992A]",
+        class: "border border-yellow-200 bg-yellow-100/30",
         icon: PythonIcon,
     },
     C: {
         name: "C++",
-        class: "bg-[#265378]",
+        class: "border border-blue-200 bg-blue-100/30",
         icon: CIcon,
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "border border-orange-200 bg-orange-100/30",
+        icon: AstroIcon,
+    },
+    TAILWINDCSS: {
+        name: "Tailwind CSS",
+        class: "border border-cyan-200 bg-cyan-100/30",
+        icon: TailwindCSSIcon,
     },
 }
 
 const PROJECTS = [
+    {
+        title: "ToolSun - Catálogo de Componentes Personalizados",
+        description: "Desarrolé un sitio dónde podrán encontrar componentes personalizados con Tailwind CSS para diseñar de manera eficiente sus páginas web.",
+        href: "https://github.com/blaballos/ToolSun",
+        image: "/projects/toolsun-image.webp",
+        tags: [TAGS.ASTRO, TAGS.TAILWINDCSS],
+    },
     {
         title: "Sistema para la Gestión de Clientes",
         description: "He desarrollado un sistema para el registro y gestión de clientes en una veterinaria. Utilicé métodos y atributos privados en las clases, optimizando la encapsulación y mejorando la seguridad del código.",
@@ -50,7 +69,7 @@ const PROJECTS = [
             <ul class="flex flex-row gap-x-4 pb-4">
               {tags.map((tag) => (
                 <li>
-                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                  <span class={`flex gap-x-2 rounded-xl text-xs font-semibold ${tag.class} py-1 px-2`}>
                       <tag.icon class="size-4"/>
                       {tag.name}
                   </span>
@@ -59,8 +78,9 @@ const PROJECTS = [
               }
             </ul>
         
-            <div class="text-white opacity-80 pb-4">{description}</div>
-            <footer class="flex justify-start gap-x-4">
+            <div class="text-md text-white opacity-80 pb-4">{description}</div>
+            <footer class="flex flex-row justify-start gap-x-4">
+              <CodeBadge href={href}/>
               <CodeBadge href={href}/>
             </footer>
           </div>

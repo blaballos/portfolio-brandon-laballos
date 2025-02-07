@@ -1,10 +1,10 @@
 ---
 import CIcon from "./icons/C++Icon.astro";
 import PythonIcon from "./icons/PythonIcon.astro";
-import HTMLIcon from "./icons/HTMLIcon.astro";
-import CSSIcon from "./icons/CSSIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
+import FirebaseIcon from "./icons/FirebaseIcon.astro";
 
 const ICONS = {
     PYTHON: {
@@ -13,17 +13,17 @@ const ICONS = {
     C: {
         svg: CIcon,
     },
-    HTML: {
-        svg: HTMLIcon,
+    JAVASCRIPT: {
+        svg: JavaScriptIcon,
     },
-    TAILWINDCSS: {
-        svg: TailwindCSSIcon,
-    },
-    CSS: {
-        svg: CSSIcon,
+    FIREBASE: {
+        svg: FirebaseIcon,
     },
     ASTRO: {
         svg: AstroIcon,
+    },
+    TAILWINDCSS: {
+        svg: TailwindCSSIcon,
     },
 }
 
@@ -35,16 +35,16 @@ const SKILLS = [
         icons: [ICONS.C],
     },
     {
+        icons: [ICONS.JAVASCRIPT],
+    },
+    {
+        icons: [ICONS.FIREBASE],
+    },
+    {
         icons: [ICONS.ASTRO],
     },
     {
-        icons: [ICONS.HTML],
-    },
-    {
         icons: [ICONS.TAILWINDCSS],
-    },
-    {
-        icons: [ICONS.CSS],
     },
 ]
 ---

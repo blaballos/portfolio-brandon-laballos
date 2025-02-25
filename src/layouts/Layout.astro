@@ -21,8 +21,6 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-		<div class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-950
-      	bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header />
 		<slot />
 		<Footer />
@@ -35,7 +33,6 @@ const { title, description } = Astro.props;
 	}
 	
 	body {
-		background: #050505;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
@@ -45,5 +42,19 @@ const { title, description } = Astro.props;
 		html {
 			scroll-behavior: auto;
 		}
+	}
+
+	@font-face {
+		font-family: 'SavoryCurry';
+		src: url('/fonts/SavoryCurry.woff2') format('woff2'),
+			 url('/fonts/SavoryCurry.woff') format('woff');
+	}
+
+	@font-face {
+		font-family: 'HeyComic';
+		src: url('/fonts/HeyComic.woff2') format('woff2'),
+			 url('/fonts/HeyComic.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 	}
 </style>

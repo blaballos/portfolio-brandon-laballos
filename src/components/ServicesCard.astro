@@ -1,0 +1,65 @@
+---
+import AstroSVG from "./icons/AstroSVG.astro";
+import TailwindSVG from "./icons/TailwindSVG.astro";
+import FigmaSVG from "./icons/FigmaSVG.astro";
+
+const TAGS = {
+    ASTRO: {
+        name: "Astro",
+        icon: AstroSVG,
+    },
+    TAILWINDCSS: {
+        name: "Tailwind CSS",
+        icon: TailwindSVG,
+    },
+    FIGMA: {
+        name: 'Figma',
+        icon:   FigmaSVG,
+    },
+}
+
+const SERVICES = [
+    {
+        title: "Diseño web",
+        text1: "Voy a diseñar tu futura página web o rediseñar la actual para que la puedas desarrollar.",
+        text2: "Me encargaré de crear un diseño profesional para que tu empresa destaque mucho, mejorando la experiencia de tus clientes.",
+        tags: [TAGS.FIGMA],
+        borderClass: "border-[#4565E6]",
+        titleClass:'text-[#4565E6]',
+    },
+    {
+        title: "Desarrollo web",
+        text1: "Construiré un sitio web seguro y 100% estable, utilizando algunas de las tecnologías más usadas del mercado.",
+        text2: "Crearé una página web dinámica y totalmente intuitiva con el fin de que tus clientes tengan una experiencia única.",
+        tags: [TAGS.ASTRO, TAGS.TAILWINDCSS],
+        borderClass: "border-[#FFB82C]",
+        titleClass:'text-[#FFB82C]',
+    },
+]
+---
+
+<div class="flex flex-col space-y-4">
+    {
+        SERVICES.map(({title, text1, text2, tags, borderClass, titleClass}) => (
+            <div class={`flex flex-col justify-center items-start p-4 pr-8 border-4 ${borderClass} rounded-sm rounded-tr-3xl rounded-bl-3xl space-y-4`}>
+                <h2 class={`text-4xl font-extrabold ${titleClass}`}>{title}</h2>
+                <div class="max-w-lg space-y-2">
+                    <p class="text-sm font-semibold text-[#260702]">{text1}</p>
+                    <p class="text-sm font-semibold text-[#260702]">{text2}</p>
+                </div>
+                <ul class="flex space-x-4">
+                    {
+                        tags.map((tag) => (
+                            <li>
+                                <span class="flex gap-x-2 text-sm font-semibold text-[#260702]">
+                                    <tag.icon class="size-6"/>
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        ))
+    }
+</div>

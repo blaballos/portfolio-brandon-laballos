@@ -1,9 +1,3 @@
----
-import SocialBadges from '../components/SocialBadges.astro';
-import GitHubIcon from '../components/icons/GitHubIcon.astro';
-import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
----
-
 <article class="flex flex-col md:flex-row space-y-8 space-x-0 md:space-y-0 md:space-x-8">
     <div class="max-w-sm lg:max-w-4xl space-y-4 text-sm lg:text-lg text-pretty opacity-80 text-white">
         <p>
@@ -20,16 +14,6 @@ import HackerRankIcon from '../components/icons/HackerRankIcon.astro';
     </div>
     <div class="flex flex-col justify-center items-center space-y-4">
         <img class="rounded-2xl max-w-sm lg:max-w-xl md:w-full h-72 md:rotate-2 p-2 border border-gray-800" src="/images/foto-brandon-laballos.webp" alt="Foto de Brandon Laballos">
-        <div class="flex flex-row gap-x-2">
-            <SocialBadges href="https://github.com/blaballos" class="text-sm py-1 px-2">
-				<GitHubIcon class="size-5 lg:size-6"/>
-				GitHub
-			</SocialBadges>
 
-            <SocialBadges href="https://www.hackerrank.com/blaballos" class="text-sm py-1 px-2">
-				<HackerRankIcon class="size-5 lg:size-6"/>
-				HackerRank
-			</SocialBadges>
-        </div>
     </div>
 </article>

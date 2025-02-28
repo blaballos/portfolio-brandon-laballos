@@ -2,6 +2,7 @@
 import AstroSVG from "./icons/AstroSVG.astro";
 import TailwindSVG from "./icons/TailwindSVG.astro";
 import FigmaSVG from "./icons/FigmaSVG.astro";
+import Id from "../pages/services/[id].astro";
 
 const TAGS = {
     ASTRO: {
@@ -20,12 +21,14 @@ const TAGS = {
 
 const PROJECTS = [
     {
+        id: 'sunui',
         title: "SunUI - Catálogo de Componentes",
         description: "Desarrolé un sitio dónde podrán encontrar componentes personalizados con Tailwind CSS para diseñar de manera eficiente sus páginas web.",
         image: "/projects/toolsun-image.webp",
         tags: [TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.FIGMA],
     },
     {
+      id: 'notapp',
         title: "Notapp - Dashboard para la Gestión de Proyectos",
         description: "Diseño y desarrollo de una aplicación para la gestión de tareas, integrando JavaScript para la creación dinámica de tarjetas y Firebase para un sistema seguro de registro y autenticación de usuarios.",
         image: "/projects/notapp-image.webp",
@@ -36,7 +39,7 @@ const PROJECTS = [
 
 <div class="flex flex-col space-y-24">
     {
-      PROJECTS.map(({ image, title, description, tags}) => (
+      PROJECTS.map(({ image, title, description, tags, id}) => (
         <article class="flex flex-col space-y-8 md:flex-row md:space-x-8 md:space-y-0">
           <div class="w-full md:w-1/2">
             <div class="flex rounded-lg bg-transparent p-2 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] border border-[black]">
@@ -61,7 +64,7 @@ const PROJECTS = [
             </div>
               <footer class="flex justify-between items-center w-full">
                   <img src="https://github.com/blaballos.png" alt="" class="size-12 rounded-full" />
-                <a href="/" class="px-2 z-30 py-1 bg-transparent border-2 text-black border-black rounded-2xl rounded-tl-lg rounded-br-lg relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-blue-500 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-xl after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 hover:text-white">
+                <a href={`/services/${id}`} class="px-2 z-30 py-1 bg-transparent border-2 text-black border-black rounded-2xl rounded-tl-lg rounded-br-lg relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-blue-500 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-xl after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 hover:text-white">
                   <span  class="text-sm font-HeyComic">ver más</span>
                 </a>
               </footer>

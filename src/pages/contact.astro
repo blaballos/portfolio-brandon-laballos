@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import GitHub from '../components/icons/GitHub.astro';
+import Instagram from '../components/icons/Instagram.astro';
+import Mail from '../components/icons/Mail.astro';
+import Arrow from '../components/icons/Arrow.astro';
+
+---
+
+<Layout 
+title='Contacto'
+description='¡Contacta a Brandon Laballos para empezar a trabajar y hacer realidad tu idea!'>
+
+<section class="w-full my-16">
+    <article class="max-w-6xl flex justify-between items-start mx-auto bg-white px-12 py-16 shadow-xl rounded-3xl">
+        <div class="flex flex-col space-y-12 w-1/2">
+            <div class="max-w-xl space-y-2">
+                <span class="text-xl text-[#260702] font-bold">/contacto</span>
+                <h3 class="text-5xl text-[#260702] font-extrabold font-SavoryCurry">¡Manos a la obra!</h3>
+            </div>
+            <div class="max-w-xs space-y-6">
+                <p class="text-md font-HeyComic font-bold text-[#260702] text-pretty">Escríbeme, comparte tu idea y construyamos algo increíble.</p>
+            </div>
+            <div class="max-w-sm">
+                <a href="mailto:laballosbrandon@gmail.com" >
+                    <div class="w-full flex justify-between items-center px-4 py-2 border-none bg-blue-500 rounded-2xl rounded-tl-lg rounded-br-lg text-white group">
+                        <span class="flex items-center text-lg font-semibold gap-x-2"><Mail />laballosbrandon@gmail.com</span>
+                        <Arrow class="-rotate-45 group-hover:rotate-0 transition duration-300"/>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="w-1/2 space-y-4">
+            <ContactForm />
+            <div class="max-w-sm mx-auto">
+                <div class="flex flex-col justify-center items-center space-y-4">
+                    <ul class="flex gap-x-4">
+                        <li><a href="https://www.linkedin.com/in/brandonlaballos/" target="_blank" rel="noopener noreferrer"><LinkedIn class="size-8 text-[#283A84]"/></a></li>
+                        <li><a href="https://www.github.com/blaballos" target="_blank" rel="noopener noreferrer"><GitHub class="size-8 text-[#283A84]"/></a></li>
+                        <li><a href="https://www.instagram.com/blaballos/" target="_blank" rel="noopener noreferrer"><Instagram class="size-8 text-[#283A84]"/></a></li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </article>
+</section>
+</Layout>

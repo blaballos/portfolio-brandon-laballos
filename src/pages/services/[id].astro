@@ -1,0 +1,107 @@
+---
+import AstroSVG from "../../components/icons/AstroSVG.astro";
+import TailwindSVG from "../../components/icons/TailwindSVG.astro";
+import FigmaSVG from "../../components/icons/FigmaSVG.astro";
+
+
+export async function getStaticPaths() {
+    const TAGS = {
+    ASTRO: {
+        name: "Astro",
+        icon: AstroSVG,
+    },
+    TAILWINDCSS: {
+        name: "Tailwind",
+        icon: TailwindSVG,
+    },
+    FIGMA: {
+        name: 'Figma',
+        icon:   FigmaSVG,
+    },
+    }
+
+    const pages = [
+        {
+            id: 'sunui',
+            title:'SunUI',
+            description:'Desarrolé un sitio dónde podrán encontrar componentes personalizados con Tailwind CSS para diseñar de manera eficiente sus páginas web.',
+            href:'https://toolsun.netlify.app/',
+            img:'/projects/toolsun-image.webp',
+            tags: [TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.FIGMA],
+        },
+        {
+            id: 'notapp',
+            title:'Notapp',
+            description:'Diseño y desarrollo de una aplicación para la gestión de tareas, integrando JavaScript para la creación dinámica de tarjetas y Firebase para un sistema seguro de registro y autenticación de usuarios.',
+            href:'https://notapp-blaballos.netlify.app/',
+            img:'/projects/notapp-image.webp',
+            tags: [TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.FIGMA],
+        },
+
+    ]
+    return pages.map(({id, title, description, href, img, tags}) => {
+        return {
+            params: {id}, 
+            props: {title, description, href, img, tags}
+        }
+    })
+}
+
+const { id } = Astro.params
+const { title, description, href, img, tags } = Astro.props
+
+
+import Layout from "../../layouts/Layout.astro";
+import AvatarBadge from "../../components/AvatarBadge.astro";
+import Network from "../../components/icons/Network.astro"
+import Arrow from "../../components/icons/Arrow.astro";
+---
+
+<Layout
+title={title}
+description={description}>
+<section id="proyectos" class="w-full mt-16 mb-24">
+    <article class="max-w-6xl flex flex-col mx-auto bg-white px-12 py-16 shadow-xl rounded-3xl space-y-16">
+        <div class="flex justify-between">
+            <div class="w-full flex flex-col space-y-8">
+                <div class="space-y-2">
+                    <a href={href} target="_blank" rel="noopener noreferrer" class="text-md text-blue-500 font-bold flex justify-start items-center gap-x-1 hover:underline"><Network class="size-5"/>www.{id}.com</a>
+                    <h3 class="text-7xl text-[#260702] font-SavoryCurry">{title}</h3>
+                </div>
+                <div class="max-w-lg">
+                    <p class="text-md font-HeyComic font-bold text-[#260702]/80 text-pretty">{description}</p>
+                </div>
+            </div>
+            <div class="w-1/2 flex flex-col justify-between">
+                <div class="flex justify-between items-center">
+                    <span class="text-md font-bold text-[#260702]">Tecnologías:</span>
+                    <ul class="flex gap-x-2">
+                        {tags.map((tag) => (
+                        <li class="py-1 px-2 border border-black rounded-full">
+                            <span class={`flex items-center justify-start text-black gap-x-1 text-xs font-semibold text-nowrap`}>
+                                <tag.icon class="size-4"/>
+                                {tag.name}
+                            </span>
+                        </li>
+                        ))
+                        }
+                    </ul>
+                </div>
+                <footer class="w-full">
+                    <AvatarBadge />
+                </footer>
+            </div>
+        </div>
+        <div class="w-full">
+            <div class="flex rounded-lg bg-transparent p-2 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] border border-[black]">
+                <img alt="Captura del Proyecto" class="w-full h-full rounded-lg hover:scale-95 transition duration-500" loading="lazy" src={img} />
+            </div>
+        </div>
+        <div class="w-full flex justify-between items-center">
+            <a href={href} target="_blank" rel="noopener noreferrer" class="flex justify-center items-center px-4 py-2 border-none bg-blue-500 rounded-2xl rounded-tl-lg rounded-br-lg text-xl text-white font-semibold gap-x-2 group">Ir a la página web<span class="-rotate-45 group-hover:rotate-0 transition duration-300"><Arrow /></span></a>
+            <a href="/projects/" class="flex items-center group text-md font-HeyComic font-bold text-[#260702] gap-x-1"><span class="rotate-180 group-hover:-translate-x-1 transition duration-300"><Arrow /></span>volver</a>
+        </div>
+    </article>
+</section>
+
+</Layout>

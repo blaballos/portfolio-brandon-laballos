@@ -8,6 +8,13 @@ export default {
 				HeyComic: ["'HeyComic'", "Onest Variable"], 
 				SavoryCurry: ["'SavoryCurry'", "Onest Variable"],
 			},
+			colors: {
+				lightYellow: '#FEFCE0',
+				selectiveYellow: '#FFB82C',
+				marianBlue: '#283A84',
+				royalBlue: '#4565E6',
+				blackBean: '#260702',
+			},
 		},
 	},
 	plugins: [],

@@ -3,26 +3,26 @@ import ProjectCard from "./ProjectCard.astro"
 import Arrow from "./icons/Arrow.astro"
 ---
 
-<section id="proyectos" class="w-full my-24">
-    <article class="max-w-6xl flex flex-col mx-auto bg-white px-12 py-16 shadow-xl rounded-3xl space-y-32">
-        <div class="flex justify-between">
-            <div class="flex flex-col space-y-12 w-1/2">
+<section id="proyectos" class="w-full my-24 md:my-36 px-4 md:px-4">
+    <article class="w-full md:max-w-6xl flex flex-col justify-between items-start mx-auto bg-white px-4 md:px-12 py-16 shadow-xl rounded-3xl space-y-24">
+        <div class="w-full flex flex-col md:flex-row justify-between space-y-4">
+            <div class="w-full md:w-1/2 flex flex-col space-y-12">
                 <div class="max-w-xl space-y-2">
                     <span class="text-xl text-blackBean font-bold">/proyectos</span>
-                    <h3 class="text-5xl text-blackBean font-extrabold font-SavoryCurry">Ideas que ya son <span class="ml-28">una</span> <span class="border-b-4 border-selectiveYellow">realidad</span>.</h3>
+                    <h3 class="text-4xl mdtext-5xl text-blackBean font-extrabold font-SavoryCurry">Ideas que ya son <span class="ml-0 md:ml-28">una</span> <span class="border-b-4 border-selectiveYellow">realidad</span>.</h3>
                 </div>
                 <div class="max-w-lg space-y-6">
                     <p class="text-md font-HeyComic font-bold text-blackBean text-pretty">Hacer realidad una idea no es tarea sencilla, pero con dedicación y pasión, todo es posible.</p>
                     <p class="text-md font-HeyComic font-bold text-blackBean text-pretty">Me esfuerzo al máximo para desarrollar proyectos únicos, modernos y personalizados para <span class="text-royalBlue">dejar una huella</span> en el mundo digital.</p>
                 </div>
             </div>
-            <div class="w-1/2 flex justify-end items-end">
+            <div class="w-full md:w-1/2 flex justify-end items-end">
                 <a href="/projects/" class="flex items-center group text-md font-HeyComic font-bold text-blackBean gap-x-1">proyectos <span class="group-hover:translate-x-1 transition duration-200"><Arrow /></span></a>
             </div>
         </div>
         <ProjectCard />
         <div class="w-full flex justify-center items-center">
-            <a href="/projects/" class="flex justify-center items-center px-8 py-2 border-none bg-royalBlue rounded-2xl rounded-tl-lg rounded-br-lg text-xl text-white font-semibold gap-x-2 group">ver todos los proyectos<span class="group-hover:translate-x-1 transition duration-300"><Arrow /></span></a>
+            <a href="/projects/" class="flex justify-center items-center px-4 md:px-8 py-2 border-none bg-royalBlue rounded-2xl rounded-tl-lg rounded-br-lg text-md md:text-xl text-white font-semibold gap-x-2 group">ver todos los proyectos<span class="group-hover:translate-x-1 transition duration-300"><Arrow /></span></a>
           </div>
     </article>
 </section>

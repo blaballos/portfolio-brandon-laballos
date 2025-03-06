@@ -60,21 +60,21 @@ import Arrow from "../../components/icons/Arrow.astro";
 <Layout
 title={title}
 description={description}>
-<section id="proyectos" class="w-full mt-16 mb-24">
-    <article class="max-w-6xl flex flex-col mx-auto bg-white px-12 py-16 shadow-xl rounded-3xl space-y-16">
-        <div class="flex justify-between">
-            <div class="w-full flex flex-col space-y-8">
+<section id="proyectos" class="w-full my-24 md:my-36 px-4 md:px-0">
+    <article class="max-w-6xl flex flex-col mx-auto bg-white px-4 md:px-12 py-16 shadow-xl rounded-3xl space-y-8 md:space-y-16">
+        <div class="flex flex-col md:flex-row justify-between space-y-6">
+            <div class="w-full flex flex-col space-y-6 md:space-y-8">
                 <div class="space-y-2">
-                    <a href={href} target="_blank" rel="noopener noreferrer" class="text-md text-royalBlue font-bold flex justify-start items-center gap-x-1 hover:underline"><Network class="size-5"/>www.{id}.com</a>
-                    <h3 class="text-7xl text-blackBean font-SavoryCurry">{title}</h3>
+                    <a href={href} target="_blank" rel="noopener noreferrer" class="text-sm md:text-md text-royalBlue font-bold flex justify-start items-center gap-x-1 hover:underline"><Network class="size-4 md:size-5"/>www.{id}.com</a>
+                    <h3 class="text-6xl md:text-7xl text-blackBean font-SavoryCurry">{title}</h3>
                 </div>
                 <div class="max-w-lg">
-                    <p class="text-md font-HeyComic font-bold text-blackBean/80 text-pretty">{description}</p>
+                    <p class="text-sm md:text-md font-HeyComic font-bold text-blackBean/80 text-pretty">{description}</p>
                 </div>
             </div>
-            <div class="w-1/2 flex flex-col justify-between">
+            <div class="w-full md:w-1/2 flex flex-col justify-between space-y-6">
                 <div class="flex justify-between items-center">
-                    <span class="text-md font-bold text-blackBean">Tecnologías:</span>
+                    <span class="text-sm md:text-md font-bold text-blackBean">Tecnologías:</span>
                     <ul class="flex gap-x-2">
                         {tags.map((tag) => (
                         <li class="py-1 px-2 border border-black rounded-full">
@@ -98,7 +98,7 @@ description={description}>
             </div>
         </div>
         <div class="w-full flex justify-between items-center">
-            <a href={href} target="_blank" rel="noopener noreferrer" class="flex justify-center items-center px-4 py-2 border-none bg-royalBlue rounded-2xl rounded-tl-lg rounded-br-lg text-xl text-white font-semibold gap-x-2 group">Ir a la página web<span class="-rotate-45 group-hover:rotate-0 transition duration-300"><Arrow /></span></a>
+            <a href={href} target="_blank" rel="noopener noreferrer" class="flex justify-center items-center px-4 py-2 border-none bg-royalBlue rounded-2xl rounded-tl-lg rounded-br-lg text-md md:text-xl text-white font-semibold gap-x-2 group">Ir a la página web<span class="-rotate-45 group-hover:rotate-0 transition duration-300"><Arrow /></span></a>
             <a href="/projects/" class="flex items-center group text-md font-HeyComic font-bold text-blackBean gap-x-1"><span class="rotate-180 group-hover:-translate-x-1 transition duration-300"><Arrow /></span>volver</a>
         </div>
     </article>

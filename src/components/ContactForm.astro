@@ -5,15 +5,15 @@ import Send from "./icons/Send.astro"
 <form class="w-full md:max-w-sm mx-auto space-y-6">
     <div class="flex flex-col gap-y-2">
         <label for="name" class="text-md font-HeyComic font-bold text-marianBlue">nombre:</label>
-        <input type="text" class="border-2 border-black rounded-md px-2 py-2 text-sm text-royalBlue font-semibold placeholder:text-royalBlue" placeholder="...">
+        <input name="name" id="name" type="text" class="border-2 border-black rounded-md px-2 py-2 text-sm text-royalBlue font-semibold placeholder:text-royalBlue" placeholder="...">
     </div>
     <div class="flex flex-col gap-y-2">
-        <label for="name" class="text-md font-HeyComic font-bold text-marianBlue">email:</label>
-        <input type="email" class="border-2 border-black rounded-md px-2 py-2 text-sm text-royalBlue font-semibold placeholder:text-royalBlue" placeholder="...">
+        <label for="email" class="text-md font-HeyComic font-bold text-marianBlue">email:</label>
+        <input name="email" id="email" type="email" class="border-2 border-black rounded-md px-2 py-2 text-sm text-royalBlue font-semibold placeholder:text-royalBlue" placeholder="...">
     </div>
     <div class="flex flex-col gap-y-2">
-        <label for="" class="text-md font-HeyComic font-bold text-marianBlue">mensaje:</label>
-        <textarea name="" id="" rows="5" class="border-2 border-black rounded-md px-2 py-2 text-sm text-royalBlue font-semibold placeholder:text-royalBlue resize-none" placeholder="..."></textarea>
+        <label for="message" class="text-md font-HeyComic font-bold text-marianBlue">mensaje:</label>
+        <textarea name="message" id="message" rows="5" class="border-2 border-black rounded-md px-2 py-2 text-sm text-royalBlue font-semibold placeholder:text-royalBlue resize-none" placeholder="..."></textarea>
     </div>
     <div class="flex justify-center items-center">
         <button class="w-full flex justify-center items-center px-4 py-2 border-none bg-royalBlue rounded-2xl rounded-tl-lg rounded-br-lg text-lg text-white font-semibold gap-x-2 group">enviar<span class="group-hover:translate-x-1 transition duration-200"><Send /></span></button>

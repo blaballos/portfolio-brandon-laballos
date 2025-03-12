@@ -43,8 +43,8 @@ const PROJECTS = [
         <article class="flex flex-col space-y-8 md:flex-row md:space-x-8 md:space-y-0">
           <div class="w-full md:w-1/2">
             <div class="flex rounded-lg bg-transparent p-2 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] border border-[black]">
-              <a href={`/services/${id}`}>
-                <img alt="Captura del Proyecto" class="w-full h-full rounded-lg hover:scale-95 transition duration-500" loading="lazy" src={image} />
+              <a href={`/projects/${id}`}>
+                <img alt="Captura del Proyecto" class="object-cover w-full h-full rounded-lg hover:scale-95 transition duration-500" loading="lazy" src={image} />
               </a>
             </div>
           </div>
@@ -66,7 +66,7 @@ const PROJECTS = [
             </div>
               <footer class="flex justify-between items-center w-full">
                   <img src="https://github.com/blaballos.png" alt="" class="size-12 rounded-full" />
-                <a href={`/services/${id}`} class="px-3 z-30 py-1 bg-transparent border-2 text-black border-black rounded-2xl rounded-tl-lg rounded-br-lg relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-royalBlue after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-xl after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 hover:text-white">
+                <a href={`/projects/${id}`} class="px-3 z-30 py-1 bg-transparent border-2 text-black border-black rounded-2xl rounded-tl-lg rounded-br-lg relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-royalBlue after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-xl after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 hover:text-white">
                   <span class="text-sm md:text-md font-HeyComic">ver más</span>
                 </a>
               </footer>

@@ -58,11 +58,11 @@ import Arrow from "../../components/icons/Arrow.astro";
 ---
 
 <Layout
-title={title}
+title=`${title} - Proyecto`
 description={description}>
-<section id="proyectos" class="w-full my-24 md:my-36 px-4 md:px-0">
+<section id="proyectos" class="w-full my-24 md:my-28 px-4 lg:px-0">
     <article class="max-w-6xl flex flex-col mx-auto bg-white px-4 md:px-12 py-16 shadow-xl rounded-3xl space-y-8 md:space-y-16">
-        <div class="flex flex-col md:flex-row justify-between space-y-6">
+        <div class="flex flex-col md:flex-row justify-between space-y-6 space-x-0 md:space-x-6">
             <div class="w-full flex flex-col space-y-6 md:space-y-8">
                 <div class="space-y-2">
                     <a href={href} target="_blank" rel="noopener noreferrer" class="text-sm md:text-md text-royalBlue font-bold flex justify-start items-center gap-x-1 hover:underline"><Network class="size-4 md:size-5"/>www.{id}.com</a>
@@ -73,7 +73,7 @@ description={description}>
                 </div>
             </div>
             <div class="w-full md:w-1/2 flex flex-col justify-between space-y-6">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center space-x-2">
                     <span class="text-sm md:text-md font-bold text-blackBean">Tecnologías:</span>
                     <ul class="flex gap-x-2">
                         {tags.map((tag) => (

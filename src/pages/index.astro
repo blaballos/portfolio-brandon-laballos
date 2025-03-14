@@ -9,8 +9,19 @@ import Contact from '../components/Contact.astro';
 <Layout
 title='Brandon Laballos - Front End Developer'
 description='Contrata a Laballos Brandon para crear tu aplicación web con una interfaz única. Front End Developer de Buenos Aires, Argentina.'>
-	<Hero />
-	<Services />
-	<Projects />
-	<Contact />
+	<header class="w-full py-4">
+		<div class="max-w-7xl mx-auto flex items-center justify-between">
+			<span class="text-white">2025</span>
+			<a href="" class="text-white">BLABALLOS</a>
+		</div>
+	</header>
+	<main class="flex-1 flex justify-center items-center">
+		<nav>
+			<ol class="text-white">
+				<li><a href="/services">SERVIVIOS</a></li>
+				<li><a href="/projects">PROYECTOS</a></li>
+				<li><a href="/contact">CONTACTO</a></li>
+			</ol>
+		</nav>
+	</main>
 </Layout>

@@ -1,27 +1,101 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.astro'
+import AstroSVG from "../components/icons/AstroSVG.astro";
+import TailwindSVG from "../components/icons/TailwindSVG.astro";
+import FigmaSVG from "../components/icons/FigmaSVG.astro";
+import Id from "../pages/projects/[id].astro";
+
+const TAGS = {
+    ASTRO: {
+        name: "Astro",
+        icon: AstroSVG,
+    },
+    TAILWINDCSS: {
+        name: "Tailwind",
+        icon: TailwindSVG,
+    },
+    FIGMA: {
+        name: 'Figma',
+        icon:   FigmaSVG,
+    },
+}
+
+const PROJECTS = [
+    {
+        id: 'sunui',
+        title: "SunUI - Catálogo de Componentes",
+        description: "Desarrolé un sitio dónde podrán encontrar componentes personalizados con Tailwind CSS para diseñar de manera eficiente sus páginas web.",
+        image: "/projects/sunui-image.webp",
+        tags: [TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.FIGMA],
+    },
+    {
+      id: 'notapp',
+        title: "Notapp - Dashboard para la Gestión de Proyectos",
+        description: "Diseño y desarrollo de una aplicación para la gestión de tareas, integrando JavaScript para la creación dinámica de tarjetas y Firebase para un sistema seguro de registro y autenticación de usuarios.",
+        image: "/projects/notapp-image.webp",
+        tags: [TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.FIGMA],
+    },
+]
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout 
-title='Proyectos Destacados de Brandon Laballos'
-description='¡Explora mi portfolio de proyectos y descubre como ayudo a mis clientes!'>
-
-<section id="proyectos" class="w-full my-24 md:my-28 px-4 md:px-4">
-    <article class="w-full md:max-w-6xl flex flex-col justify-between items-start mx-auto bg-white px-4 md:px-12 py-16 shadow-xl rounded-3xl space-y-24">
-        <div class="w-full flex flex-col md:flex-row justify-between space-y-4">
-            <div class="w-full md:w-1/2 flex flex-col space-y-12">
-                <div class="max-w-xl space-y-2">
-                    <span class="text-xl text-blackBean font-bold">/proyectos</span>
-                    <h3 class="text-5xl text-blackBean font-extrabold font-SavoryCurry">Proyectos <span class="border-b-4 border-selectiveYellow">destacados</span>.</h3>
-                </div>
-                <div class="max-w-lg space-y-6">
-                    <p class="text-md font-HeyComic font-bold text-blackBean text-pretty">Hacer realidad una idea no es tarea sencilla, pero con dedicación y pasión, todo es posible.</p>
-                    <p class="text-md font-HeyComic font-bold text-blackBean text-pretty">Me esfuerzo al máximo para desarrollar proyectos únicos, modernos y personalizados para <span class="text-royalBlue">dejar una huella</span> en el mundo digital.</p>
-                </div>
+<Layout title=""
+description="">
+    <main class="flex-1 flex flex-col items-center justify-center">
+        <h1>PROYECTOS</h1>
+        <section class="space-y-6">
+            <div class="flex flex-col space-y-24">
+                {
+                  PROJECTS.map(({ image, title, description, tags, id}) => (
+                    <article class="flex flex-col space-y-8 md:space-x-8 md:space-y-0 bg-[#71C893] p-4">
+                        <div class="border-2 border-black">
+                            <div class="w-full md:w-1/2 flex flex-col justify-between items-start space-y-4">
+                                <div class="flex flex-wrap">
+                                <h3 class="text-2xl font-bold text-black pb-4">{title}</h3>
+                                <p class="text-md text-black/80 pb-4">{description}</p>
+                                </div>
+                                <ul class="flex gap-x-4">
+                                    {tags.map((tag) => (
+                                        <li class="py-1 px-2 border border-black rounded-full">
+                                        <span class={`flex items-center justify-start text-black gap-x-1 text-xs font-semibold text-nowrap`}>
+                                            <tag.icon class="size-4"/>
+                                            {tag.name}
+                                        </span>
+                                        </li>
+                                        ))
+                                    }
+                                </ul>
+                                <footer class="flex justify-between items-center w-full">
+                                    <img src="https://github.com/blaballos.png" alt="" class="size-12 rounded-full" />
+                                    <a href={`/projects/${id}`} class="px-3 z-30 py-1 bg-transparent border-2 text-black border-black rounded-2xl rounded-tl-lg rounded-br-lg relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-royalBlue after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-xl after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 hover:text-white">
+                                    <span class="text-sm md:text-md font-HeyComic">ver más</span>
+                                    </a>
+                                </footer>
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <div class="flex rounded-lg bg-transparent p-2 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] border border-[black]">
+                                <a href={`/projects/${id}`}>
+                                    <img alt="Captura del Proyecto" class="object-cover w-full h-full rounded-lg hover:scale-95 transition duration-500" loading="lazy" src={image} />
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  ))
+                }
             </div>
+        </section>
+    </main>
+    <footer class="w-full py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span>2025</span>
+            <span>Diseñado y desarrollado con 💜 por <a href="">blaballos</a></span>
+            <span>.........................</span>
         </div>
-        <ProjectCard />
-    </article>
-</section>
+    </footer>
 </Layout>
+
+<style>
+    html {
+        background-color: #C96147;
+    }
+</style>

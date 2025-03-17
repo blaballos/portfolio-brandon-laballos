@@ -1,40 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import FigmaSVG from "../components/icons/FigmaSVG.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import Figma from "../components/icons/Figma.astro";
 ---
 
-<Layout title=""
-description="">
-    <main class="flex-1 flex flex-col items-center justify-center">
-        <h1>SERVICIOS</h1>
+<Layout title="Servicios - Brandon Laballos"
+description="¿Tienes una idea? Hazla realidad. Me especializo en convertir ideas en experiencias digitales únicas. Te ofrezco soluciones sólidas, totalmente personalizadas y enfocadas en potenciar tu proyecto.">
+    <main class="flex-1 flex flex-col items-center justify-center space-y-6">
+        <h1 class="font-LuckiestGuy text-6xl text-SUNGLOW drop-shadow-[6px_6px_0px_#1D1F1A]">SERVICIOS</h1>
         <section class="space-y-6">
-            <div class="flex items-center justify-between border-2 border-black p-4">
-                <article class="max-w-xl">
-                    <h2>DISEÑO WEB</h2>
-                    <p>Voy a diseñar tu futura página web o rediseñar la actual para que refleje la identidad de tu marca y puedas desarrollarla.</p>
-                    <p>Me encargaré de crear un diseño profesional, funcional y moderno para mejorar la experiencia de tus clientes.</p>
+            <div class="flex items-center justify-between border-2 border-EERIEBLACK p-4 group hover:cursor-grab hover:bg-JASPER hover:border-JASPER">
+                <article class="max-w-xl space-y-4">
+                    <h2 class="font-ExconVariable text-4xl text-EERIEBLACK group-hover:text-DUN">DISEÑO WEB</h2>
+                    <div class="font-ExconBold text-sm text-EERIEBLACK/80 group-hover:text-DUN/80 space-y-2">
+                        <p class="">Voy a diseñar tu futura página web o rediseñar la actual para que refleje la identidad de tu marca y puedas desarrollarla.</p>
+                        <p class="font-ExconBold">Me encargaré de crear un diseño profesional, funcional y moderno para mejorar la experiencia de tus clientes.</p>
+                    </div>
                 </article>
-                <aside>
-                    <FigmaSVG />
+                <aside class="flex flex-col items-center justify-center space-y-2 text-EERIEBLACK group-hover:text-DUN/80">
+                    <AstroIcon class="size-16"/>
+                    <Tailwind class="size-16"/>
                 </aside>
             </div>
-            <div class="flex items-center justify-between border-2 border-black p-4">
-                <article class="max-w-xl">
-                    <h2>DISEÑO WEB</h2>
-                    <p>Voy a diseñar tu futura página web o rediseñar la actual para que refleje la identidad de tu marca y puedas desarrollarla.</p>
-                    <p>Me encargaré de crear un diseño profesional, funcional y moderno para mejorar la experiencia de tus clientes.</p>
+            <div class="flex items-center justify-between border-2 border-EERIEBLACK p-4 group hover:cursor-grab hover:bg-JASPER hover:border-JASPER">
+                <article class="max-w-xl space-y-4">
+                    <h2 class="font-ExconVariable text-4xl text-EERIEBLACK group-hover:text-DUN">DESARROLLO WEB</h2>
+                    <div class="font-ExconBold text-sm text-EERIEBLACK/80 group-hover:text-DUN/80 space-y-2">
+                        <p>Construiré una página web segura y 100% estable, utilizando algunas de las tecnologías más usadas del mercado.</p>
+                        <p>Me enfocaré para desarrollar experiencias digitales intuitivas, garantizando una navegación fluida y atractiva para tus clientes.</p>
+                    </div>
                 </article>
-                <aside>
-                    <FigmaSVG />
+                <aside class="text-EERIEBLACK group-hover:text-DUN/80">
+                    <Figma class="size-16"/>
                 </aside>
             </div>
         </section>
     </main>
     <footer class="w-full py-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <span>2025</span>
-            <span>Diseñado y desarrollado con 💜 por <a href="">blaballos</a></span>
-            <span>.........................</span>
+        <div class="max-w-7xl mx-auto flex items-center justify-between font-ImFellFrench text-NIGHT">
+            <span>© 2025</span>
+            <span>Diseñado y desarrollado con 💜 por <a class="hover:underline" href="https://www.github.com/blaballos" target="_blank" rel="noopener noreferrer" aria-label="Go to GitHub profile">blaballos</a></span>
+            <span>... . --. ..- .. -- --- .- --.- ..- ..</span>
         </div>
     </footer>
 </Layout>

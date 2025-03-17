@@ -5,15 +5,19 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				HeyComic: ["'HeyComic'", "Onest Variable"], 
-				SavoryCurry: ["'SavoryCurry'", "Onest Variable"],
+				LuckiestGuy: ["'LuckiestGuy'", "Onest Variable"], 
+				ImFellFrench: ["'ImFellFrench'", "Onest Variable"],
+				ExconVariable: ["'ExconVariable'", "Onest Variable"],
+				ExconBold: ["'ExconBold'", "Onest Variable"],
 			},
 			colors: {
-				lightYellow: '#FEFCE0',
-				selectiveYellow: '#FFB82C',
-				marianBlue: '#283A84',
-				royalBlue: '#4565E6',
-				blackBean: '#260702',
+				WHITE: '#FEFEFE',
+				NIGHT: '#0A0B08',
+				EERIEBLACK: '#1D1F1A',
+				SUNGLOW: '#FBCA41',
+				DUN: '#D4C2B2',
+				EMERALD :'#71C893',
+				JASPER: '#C96147',
 			},
 		},
 	},

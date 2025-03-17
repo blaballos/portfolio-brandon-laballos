@@ -1,10 +1,7 @@
 ---
-import ClientRouter from 'astro/components/ClientRouter.astro';
 import '@fontsource-variable/onest';
+import ClientRouter from 'astro/components/ClientRouter.astro';
 import NoiseBackground from '../components/NoiseBackground.astro';
-import Background from '../components/Background.astro'
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -25,14 +22,15 @@ const { title, description } = Astro.props;
 		<ClientRouter />
 	</head>
 	<body class="flex flex-col min-h-screen">
+		<NoiseBackground />
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	html {
-		background-color: black;
+		background-color: #0A0B08;
 		font-family: 'Onest Variable', sans-serif;
-		scroll-behavior: smooth;
 	}
 	
 	body {
@@ -41,23 +39,29 @@ const { title, description } = Astro.props;
 		min-height: 100vh;
 	}
 
-	@media (prefers.reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
+	@font-face {
+		font-family: 'LuckiestGuy';
+		src: url('/fonts/LuckiestGuy.woff2') format('woff2'),
+			 url('/fonts/LuckiestGuy.woff') format('woff');
 	}
 
 	@font-face {
-		font-family: 'SavoryCurry';
-		src: url('/fonts/SavoryCurry.woff2') format('woff2'),
-			 url('/fonts/SavoryCurry.woff') format('woff');
-	}
-
-	@font-face {
-		font-family: 'HeyComic';
-		src: url('/fonts/HeyComic.woff2') format('woff2'),
-			 url('/fonts/HeyComic.woff') format('woff');
+		font-family: 'ImFellFrench';
+		src: url('/fonts/ImFellFrench.woff2') format('woff2'),
+			 url('/fonts/ImFellFrench.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'ExconVariable';
+		src: url('/fonts/ExconVariable.woff2') format('woff2'),
+			 url('/fonts/ExconVariable.woff') format('woff');
+	}
+
+	@font-face {
+		font-family: 'ExconBold';
+		src: url('/fonts/ExconBold.woff2') format('woff2'),
+			 url('/fonts/ExconBold.woff') format('woff');
 	}
 </style>

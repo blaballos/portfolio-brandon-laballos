@@ -12,8 +12,19 @@
         <textarea name="message" id="message" rows="5" class="bg-transparent border-2 border-JASPER focus:border-JASPER focus:outline-none px-2 py-2 text-sm text-JASPER/80 font-ExconBold placeholder:text-JASPER/80 resize-none" placeholder="Escribe tu mensaje aquí" required></textarea>
     </div>
     <div class="flex justify-center items-center">
-        <button class="font-LuckiestGuy text-SUNGLOW drop-shadow-[3px_3px_0px_#1D1F1A] text-4xl" type="submit">ENVIAR</button>
+        <button class="blinking-button font-LuckiestGuy text-SUNGLOW drop-shadow-[3px_3px_0px_#1D1F1A] text-4xl" type="submit">ENVIAR</button>
     </div>
     <input type="hidden" name="_autoresponse" value="¡Gracias por tu mensaje! me pondré en contacto contigo lo antes posible :)">
     <input type="hidden" name="_template" value="table">
 </form>
+
+<style>
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    .blinking-button {
+        animation: blink 1.2s step-start infinite;
+    }
+</style>

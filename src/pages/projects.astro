@@ -40,11 +40,14 @@ const PROJECTS = [
     },
 ]
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title=""
-description="">
-    <main class="flex-1 flex flex-col items-center justify-center">
+<Layout title="Proyectos Destacados - Brandon Laballos"
+description="Hacer realidad una idea no es tarea sencilla, pero con dedicación y pasión, todo es posible. Me esfuerzo al máximo para desarrollar proyectos únicos, modernos y personalizados para dejar una huella en el mundo digital."
+hideHeader={false}
+hideFooter={true}>
+    <main class="flex-1 flex flex-col items-center justify-center pt-12 pb-16">
         <h1 class="font-LuckiestGuy text-SUNGLOW text-6xl drop-shadow-[6px_6px_0px_#1D1F1A] mb-6">PROYECTOS</h1>
         <section>
             <div class="max-w-5xl mx-auto flex flex-col space-y-24">
@@ -81,8 +84,8 @@ description="">
                                     <img alt="Project screen" class="object-cover w-full h-full rounded-lg hover:scale-95 transition duration-500" loading="lazy" src={image} />
                                 </a>
                             </div>
-                            <div class="flex justify-start">
-                                <a class="flex items-center font-ExconVariable text-md text-DUN gap-x-2 px-2 py-1 border-2 border-NIGHT bg-JASPER group" href={href} target="_blank" rel="noopener noreferrer" aria-label="Go to GitHub profile">Ir a la página web<Arrow class="-rotate-45 group-hover:rotate-0 transition duration-300 size-6"/></a>
+                            <div class="flex justify-end">
+                                <a class="flex items-center font-ExconVariable text-md text-DUN gap-x-2 px-3 py-1 border-2 border-NIGHT bg-JASPER group" href={href} target="_blank" rel="noopener noreferrer" aria-label="Go to GitHub profile">Ir a la página web<Arrow class="-rotate-45 group-hover:rotate-0 transition duration-300 size-6"/></a>
                             </div>
                         </div>
                     </article>
@@ -91,13 +94,7 @@ description="">
             </div>
         </section>
     </main>
-    <footer class="w-full py-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-between font-ImFellFrench text-NIGHT">
-            <span>© 2025</span>
-            <span>Diseñado y desarrollado con 💜 por <a class="hover:underline" href="https://www.github.com/blaballos" target="_blank" rel="noopener noreferrer" aria-label="Go to GitHub profile">blaballos</a></span>
-            <span>... . --. ..- .. -- --- .- --.- ..- ..</span>
-        </div>
-    </footer>
+    <Footer footerBgColor="bg-EMERALD" footerTextColor="text-EERIEBLACK"/>
 </Layout>
 
 <style>

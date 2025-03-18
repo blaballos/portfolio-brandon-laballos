@@ -1,0 +1,27 @@
+---
+import LinkedIn from "./icons/LinkedIn.astro"
+import GitHub from "./icons/GitHub.astro"
+---
+
+<header class="w-full py-6">
+    <div class="max-w-7xl mx-auto">
+        <nav class="flex items-center">
+            <div class="flex w-full items-center justify-between gap-6 md:gap-10">
+                <a href="/" class="font-ExconVariable text-2xl text-EERIEBLACK">BLABALLOS</a>
+                <div class="flex items-center gap-6">
+                    <ul class="flex font-ExconVariable text-lg text-WHITE gap-x-6">
+                        <a href="/" class="drop-shadow-[2px_2px_0px_#1D1F1A] hover:-translate-y-1 transition duration-200">INICIO</a>
+                        <a href="/services" class="drop-shadow-[2px_2px_0px_#1D1F1A] hover:-translate-y-1 transition duration-200">SERVICIOS</a>
+                        <a href="/projects" class="drop-shadow-[2px_2px_0px_#1D1F1A] hover:-translate-y-1 transition duration-200">PROYECTOS</a>
+                        <a href="/contact" class="drop-shadow-[2px_2px_0px_#1D1F1A] hover:-translate-y-1 transition duration-200">CONTACTO</a>
+                    </ul>
+                    <div class="bg-EERIEBLACK border-none w-[2px] h-7 hidden lg:flex" role="separator" data-orientation="vertical" aria-orientation="vertical"></div>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/in/brandonlaballos/" target="_blank" rel="noopener noreferrer" aria-label="Go to LinkedIn profile"><LinkedIn class="size-8" /></a>
+                        <a href="https://www.github.com/blaballos" target="_blank" rel="noopener noreferrer" aria-label="Go to LinkedIn profile"><GitHub class="size-8"/></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

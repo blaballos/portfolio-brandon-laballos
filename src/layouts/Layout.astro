@@ -21,7 +21,7 @@ const { title, description, hideHeader = false, hideFooter = false } = Astro.pro
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="description" content="{description}" />
+		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col min-h-screen">

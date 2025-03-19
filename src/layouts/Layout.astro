@@ -8,28 +8,28 @@ import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
 	description: string;
-	hideHeader: boolean;
-	hideFooter: boolean;
+	hideHeader?: boolean;
+	hideFooter?: boolean;
 }
 
-const { title, description, hideHeader, hideFooter } = Astro.props;
+const { title, description, hideHeader = false, hideFooter = false } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="description" content={description}>
+		<meta name="description" content="{description}" />
 		<title>{title}</title>
-		<ClientRouter />
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<NoiseBackground />
-		{ hideHeader !== true && <Header /> }
+		{ !hideHeader && <Header /> }
+		<ClientRouter />
 		<slot />
-		{ hideFooter !== true && <Footer /> }
+		{ !hideFooter && <Footer /> }
 	</body>
 </html>
 
@@ -54,7 +54,7 @@ const { title, description, hideHeader, hideFooter } = Astro.props;
 	@font-face {
 		font-family: 'ImFellFrench';
 		src: url('/fonts/ImFellFrench.woff2') format('woff2'),
-			 url('/fonts/ImFellFrench.woff') format('woff');
+			 url('/fonts/ImFellFrench.woff');
 		font-weight: normal;
 		font-style: normal;
 	}
